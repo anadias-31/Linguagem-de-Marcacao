@@ -1,0 +1,133 @@
+*{
+    margin: 0; /*espaço externo */
+    padding: 0; /* espaço interno*/
+    font-family:Arial;
+}
+main{
+    /*Borda sólida de 1px cinza*/
+    border: 1px solid gray;
+    /*Arredondamento das bordas*/
+    border-radius: 35px;
+    /*Espaço externo - entre o elemento e a bordar*/
+    margin: 30px;
+    padding: 10px;
+}
+
+h1{
+    /* espaço interno entre o elemento e a borda*/
+    padding: 8px;
+    text-align: center;
+    color: #2a3ba5;
+    /* tranforma em letra maiuscula */
+    text-transform: uppercase ;
+}
+
+#texto{
+    text-indent: 50px;
+    text-align:justify;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.primeiro{
+    color:#7f00ff;
+}
+/*Mudar a cor do link ao passar o mouse*/
+.primeiro:hover{
+    color:#ffcc00;
+}
+
+#texto:hover{
+    font-size: 2px;
+}
+
+/*Aumenta o tamanho do link*/
+.segundo:hover{
+    font-size: 150%;
+}
+/*coloca fundo no link*/
+.terceiro:hover{
+    background-color: #fc8eac;
+}
+
+/*diminui o link*/
+.quarto:hover{
+    font-family: monospace;
+}
+
+/*tira a linha de baixo*/
+.quinto:hover{
+    text-decoration:none;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+main{
+    background-color: white;
+}
+
+img{
+    width:50%;
+    /*tecnica para centralizar tudo*/
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#article-central{
+    border: 1px solid gray;
+    padding: 50px;
+    background-color: #708090;
+    color: #fff
+}
+/*Estilo das bolinhas da lista*/
+ul.a{
+    list-style-type: square;
+}
+
+.b li{
+    font-family: 'Courie New';
+}
+
+ol.c{
+    list-style-type:upper-roman; 
+}
+
+ol.d{
+    list-style-type: lower-greek;
+}
+
+/*Fomnte da tabela*/
+#tabela-estilosa{
+    font-family: Arial;
+    border-collapse: collapse;/*Une em uma única borda*/
+    width:100%;
+}
+
+/*Borda na tabela*/
+#tabela-estilosa td, #tabela-estilosa th{
+    border: 1px solid #ddd;
+    padding:8px
+}
+
+/*Linha zebrada na tabela */
+#tabela-estilosa tr:nth-child(even){
+    background-color: #f2f2f2;
+    color:#000
+}
+
+#tabela-estilosa tr:hover{
+    background-color: #f2f2f2;
+    color:#000;
+}
+
+#tabela-estilosa th{
+    padding-top:12px; /*espaço interno de cima*/
+    padding-bottom: 12px; /*espaço interno de baixo*/
+    background-color: #383f46;
+    color:#fff;
+}
+/* Classe ="*" */
+/* ID= "#" */
