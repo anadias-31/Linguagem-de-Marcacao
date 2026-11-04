@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+            <nav>
+                <ul>
+                    <li class="inicio"><a href="inicio.html" class="active">Inicío</a></li>
+                        <li class="dropdown">
+                        <a href="javascript:void(0)" ><i class="fa-solid fa-angle-down"></i> Peças</a>
+                        <div class="dropdown-content">
+                            <a href="forms.html">Cadastro</a>
+                            <a href="peca.html">Tabela de cadastro</a>
+                    </ul>
+            </nav>
+    </header>
+
+    <main class="principal">
+        <img  class="imagem1" src="image.png">
+
+        <form>
+
+            <h2>1. Informações do Produto</h2>
+            <br>
+            <label>Nome do produto:</label> <br>
+            <input type="text" name="nome" required>
+            <br><br>
+
+            <label>Código do produto:</label> <br>
+            <input type="text" name="codigo" required>
+            <br><br>
+
+            <label>Categoria do produto:</label> <br>
+            <select name="categoria">
+                <option value="">Selecione</option>
+                <option>Refrigerantes</option>
+                <option>Sucos</option>
+                <option>Águas</option>
+                <option>Chás</option>
+                <option>Bebidas esportivas</option>
+                <option>Energéticos</option>
+            </select>
+            <br><br>
+
+            <label>Marca do produto:</label><br>
+            <select name="marca">
+                <option value="">Selecione</option>
+                <option>Coca-Cola</option>
+                <option>Fanta</option>
+                <option>Sprite</option>
+                <option>Schweppes</option>
+                <option>Del Valle</option>
+                <option>Powerade</option>
+            </select>
+            <br><br>
+
+            <label>Descrição do produto:</label> <br>
+            <textarea name="descricao" rows="4"></textarea>
+            <br><br>
+
+            <h2>2. Preço e Estoque</h2>
+            <br>
+            <label>Preço do produto (R$):</label> <br>
+            <input type="number" name="preco" step="0.01">
+            <br><br>
+
+            <label>Preço promocional (R$):</label> <br>
+            <input type="number" name="preco_promocional" step="0.01">
+            <br><br>
+
+            <label>Quantidade em estoque:</label> <br>
+            <input type="number" name="estoque">
+            <br><br>
+
+            <label>Estoque mínimo:</label> <br>
+            <input type="number" name="estoque_minimo">
+            <br><br>
+
+            <label>Desconto máximo permitido (%):</label> <br>
+            <input type="range" name="desconto" min="0" max="100" step="5">
+            <br><br>
+
+            <h2>3. Características do Produto</h2>
+            <br>
+            <p>Características da bebida:</p><br>
+            <div class="opcoes">
+                <label><input type="checkbox" name="caracteristicas[]" value="Sem açúcar"> Sem açúcar</label><br>
+                <label><input type="checkbox" name="caracteristicas[]" value="Baixa caloria"> Baixa caloria</label><br>
+                <label><input type="checkbox" name="caracteristicas[]" value="Com gás"> Com gás</label><br>
+                <label><input type="checkbox" name="caracteristicas[]" value="Sem gás"> Sem gás</label><br>
+                <label><input type="checkbox" name="caracteristicas[]" value="Com cafeína"> Com cafeína</label><br>
+                <label><input type="checkbox" name="caracteristicas[]" value="Sem cafeína"> Sem cafeína</label><br>
+                <label><input type="checkbox" name="caracteristicas[]" value="Embalagem retornável"> Embalagem
+                    retornável</label><br>
+            </div>
+            <br><br>
+
+            <p>Tipo de embalagem:</p><br>
+            <div class="opcoes">
+                <label><input type="radio" name="embalagem" value="Lata"> Lata</label><br>
+                <label><input type="radio" name="embalagem" value="Garrafa PET"> Garrafa PET</label><br>
+                <label><input type="radio" name="embalagem" value="Garrafa de vidro"> Garrafa de vidro</label><br>
+                <label><input type="radio" name="embalagem" value="Caixa"> Caixa</label><br>
+            </div>
+            <br><br>
+
+            <label>Volume da embalagem:</label><br>            
+            <select name="volume">
+                <option value="">Selecione</option>
+                <option>200 ml</option>
+                <option>250 ml</option>
+                <option>350 ml</option>
+                <option>500 ml</option>
+                <option>600 ml</option>
+                <option>1 litro</option>
+                <option>1,5 litros</option>
+                <option>2 litros</option>
+                <option>3 litros</option>
+            </select>
+            <br><br>
+
+            <label>Peso do produto (gramas):</label><br>
+            <input type="number" name="peso" step="0.1">
+            <br><br>
+
+            <label>Cor predominante da embalagem:</label><br>
+            <input type="color" name="cor" value="#ff0000">
+            <br><br>
+
+            <h2>4. Fabricação e Validade</h2>
+            <br>
+            <label>Data de fabricação:</label><br>
+            <input type="date" name="fabricacao">
+
+            <br><br>
+            <label>Data de validade:</label><br>
+            <input type="date" name="validade">
+
+            <br><br>
+            <label>Horário de fabricação:</label><br>
+            <input type="time" name="horario">
+
+            <br><br>
+            <label>Mês de lançamento do produto:</label><br>
+            <input type="month" name="mes_lancamento">
+
+            <br><br>
+            <label>Número do lote:</label><br>
+            <input type="text" name="lote">
+
+            <br><br>
+            <label>País de fabricação:</label><br>
+            <select name="pais">
+                <option>Brasil</option><br>
+                <option>Argentina</option><br>
+                <option>Chile</option><br>
+                <option>México</option><br>
+                <option>Estados Unidos</option><br>
+                <option>Outro</option><br>
+            </select>
+
+
+            <br><br>
+            <h2>5. Informações Nutricionais</h2>
+            <br>
+            <label>Quantidade de calorias (kcal):</label><br>
+            <input type="number" name="calorias">
+
+            <br><br>
+            <label>Quantidade de açúcar (g):</label><br>
+            <input type="number" name="acucar" >
+
+            <br><br>
+            <label>Quantidade de sódio (mg):</label><br>
+            <input type="number" name="sodio">
+
+            <br><br>
+            <label>Quantidade de cafeína (mg):</label><br>
+            <input type="number" name="cafeina" >
+
+            <br><br>
+            <label>Ingredientes:</label><br>
+            <textarea name="ingredientes" rows="4"></textarea>
+
+
+            <br><br>
+            <h2>6. Fornecedor e Distribuição</h2>
+            <br>
+            <label>Nome do fornecedor:</label><br>
+            <input type="text" name="fornecedor">
+
+            <br><br>
+            <label>E-mail do fornecedor:</label><br>
+            <input type="email" name="email_fornecedor">
+
+            <br><br>
+            <label>Telefone do fornecedor:</label><br>
+            <input type="tel" name="telefone">
+
+            <br><br>
+            <label>Site do fornecedor:</label><br>
+            <input type="url" name="site">
+
+            <br><br>
+            <label>Estado de distribuição:</label><br>
+            <select name="estado">
+                <option>São Paulo</option>
+                <option>Rio de Janeiro</option>
+                <option>Minas Gerais</option>
+                <option>Paraná</option>
+                <option>Santa Catarina</option>
+                <option>Outros</option>
+            </select>
+
+            <br><br>
+            <label>Cidade de distribuição:</label><br>
+            <input type="text" name="cidade">
+
+            <br><br>
+            <label>CEP do centro de distribuição:</label><br>
+            <input type="text" name="cep">
+
+            <br><br>
+
+            <br><br>
+            <h2>7. Imagens e Documentos</h2>
+            <br>
+            <label>Imagem do produto:</label><br>
+            <input type="file" name="imagem" accept="image/*">
+
+            <br><br>
+            <label>Ficha técnica do produto (PDF):</label><br>
+            <input type="file" name="ficha_tecnica" accept=".pdf">
+
+            <br><br>
+            <label>Link da página do produto:</label><br>
+            <input type="url" name="link_produto">
+
+            <br><br>
+            <h2>8. Situação e Comercialização</h2><br>
+            <p>Situação do produto:</p>
+            <div class="opcoes">
+                <label><input type="radio" name="situacao" value="Disponível"> Disponível</label><br>
+                <label><input type="radio" name="situacao" value="Indisponível"> Indisponível</label><br>
+                <label><input type="radio" name="situacao" value="Descontinuado"> Descontinuado</label><br>
+            </div>
+
+            <br><br>
+            <p>Canais de venda:</p>
+            <div class="opcoes">
+                <label><input type="checkbox" name="canais[]" value="Supermercados"> Supermercados</label><br>
+                <label><input type="checkbox" name="canais[]" value="Restaurantes"> Restaurantes</label><br>
+                <label><input type="checkbox" name="canais[]" value="Lojas de conveniência"> Lojas de
+                    conveniência</label><br>
+                <label><input type="checkbox" name="canais[]" value="Distribuidores"> Distribuidores</label><br>
+                <label><input type="checkbox" name="canais[]" value="Internet"> Internet</label><br>
+            </div>
+
+            <br><br>
+            <p>Classificação de vendas:</p>
+            <div class="opcoes">
+                <label><input type="radio" name="classificacao" value="Baixa"> Baixa</label><br>
+                <label><input type="radio" name="classificacao" value="Média"> Média</label><br>
+                <label><input type="radio" name="classificacao" value="Alta"> Alta</label><br>
+            </div>
+
+            <br><br>
+            <label>Observações adicionais:</label><br>
+            <textarea name="observacoes" rows="4"></textarea>
+
+            <br><br>
+            <label class="confirmacao"><br>
+                <input type="checkbox" required>
+                Confirmo que as informações cadastradas estão corretas.
+            </label>
+            <br><br>
+            <button>Enviar</button>
+           
+
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
